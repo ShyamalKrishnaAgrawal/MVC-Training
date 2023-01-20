@@ -154,6 +154,7 @@ namespace MVC2017FirstProject.Controllers
         }
 
         // GET: Students/Delete/5
+        [HttpGet, ActionName("Delete")]
         public ActionResult Delete(int? id, bool? saveChangesError=false)
         {
             if (id == null)
@@ -173,7 +174,7 @@ namespace MVC2017FirstProject.Controllers
         }
 
         // POST: Students/Delete/5
-        [HttpDelete, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
